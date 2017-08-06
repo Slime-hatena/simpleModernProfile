@@ -1,9 +1,7 @@
 @charset 'utf-8';
-
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-
 @include foundation-global-styles;
 //@include foundation-grid;
 // @include foundation-flex-grid;
@@ -48,8 +46,46 @@
 @include foundation-visibility-classes;
 // @include foundation-float-classes;
 @include foundation-flex-classes;
-
 // @include foundation-prototype-classes;
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
+body {
+    background-color: #fce;
+    color: #333;
+}
+
+#main {
+    margin: 210px 10px 0;
+    padding: 0 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#field-icon_url {
+    img {
+        border-radius: 50%;
+    }
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: -100px;
+    margin: 0 auto;
+    margin-bottom: -100px;
+}
+
+#personal_profiles {
+    padding: 0 1em;
+    #field-name {
+        text-align: center;
+        span {
+            font-size: 3em;
+            display: inline-block;
+        }
+    }
+    #field-bio {
+        text-align: center;
+        span {
+            display: inline-block;
+        }
+    }
+}

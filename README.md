@@ -1,1 +1,2 @@
 # simpleModernProfile
+FoundationとScssを使ってみたかった
