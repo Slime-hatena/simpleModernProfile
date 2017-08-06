@@ -52,6 +52,20 @@
 body {
     background-color: #fce;
     color: #333;
+    // link
+    $Color_link: #33f;
+    $Color_link_hover: #f3f;
+    a {
+        &:link,
+        &:visited,
+        &:active {
+            color: $Color_link;
+            text-decoration: none
+        }
+        &:hover {
+            color: $Color_link_hover;
+        }
+    }
 }
 
 #main {
@@ -75,6 +89,10 @@ body {
 
 #personal_profiles {
     padding: 0 1em;
+    .fa {
+        width: 1em;
+        text-align: center;
+    }
     #field-name {
         text-align: center;
         span {
@@ -84,8 +102,17 @@ body {
     }
     #field-bio {
         text-align: center;
+        margin-bottom: 1em;
         span {
             display: inline-block;
         }
     }
+}
+
+//menu
+#fixedMenu {
+    top: 50px;
+    left: 0;
+    width: 150px;
+    position: absolute;
 }
