@@ -57,9 +57,18 @@ typings/
 # dotenv environment variables file
 .env
 
+# VsCodeFiles
+/.vscode/*
+
 # Mac files
 .DS_Store
 
 # package list
 package.json
 package-lock.json
+
+# Foundation Files
+bower_components
+node_modules
+npm-debug.log
+css
