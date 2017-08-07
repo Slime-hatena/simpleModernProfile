@@ -42,7 +42,7 @@ $(document).ready(function() {
             $.each(langData, function(index, val) {
                 var cl = index.replace(/#/g, "s");
                 cl = cl.replace(/¥+/g, "p");
-                str += '<div class="data lang_color ' + cl + '" style="width: ' + val * 100 + '%">' + index + '</div>';
+                str += '<div class="data lang_color ' + cl + '" style="width: ' + val * 100 + '%"></div><div class="data_char">' + index + '<span>(' + Math.round(val * 100) + '%)</span></div>';
             });
             str += '</div>';
 
