@@ -1,0 +1,5 @@
+{
+    "html": "section.html",
+    "css": ["section.css"],
+    "js": ["section.js"]
+}

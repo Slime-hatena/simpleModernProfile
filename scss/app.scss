@@ -1,56 +1,6 @@
 @charset 'utf-8';
-@import 'settings';
 @import 'lang_color';
-@import 'foundation';
-@import 'motion-ui';
-@include foundation-global-styles;
-//@include foundation-grid;
-// @include foundation-flex-grid;
-@include foundation-xy-grid-classes;
-@include foundation-typography;
-@include foundation-button;
-@include foundation-forms;
-// @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
-@include foundation-callout;
-@include foundation-card;
-@include foundation-close-button;
-@include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
-@include foundation-responsive-embed;
-@include foundation-label;
-@include foundation-media-object;
-@include foundation-off-canvas;
-@include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
-@include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
-@include foundation-switch;
-@include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
-@include foundation-title-bar;
-@include foundation-tooltip;
-@include foundation-top-bar;
-@include foundation-visibility-classes;
-// @include foundation-float-classes;
-@include foundation-flex-classes;
-// @include foundation-prototype-classes;
-@include motion-ui-transitions;
-@include motion-ui-animations;
-@include motion-ui-animations;
+// @import 'f';
 @mixin keyframes($animation-name: animaton) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -100,9 +50,18 @@
     padding: 0 2em;
 }
 
+* {
+    box-sizing: inherit;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+}
+
 body {
     background-color: #fce;
     color: #333;
+    line-height: 1.5;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
     // link
     $Color_link: #33f;
     $Color_link_hover: #f3f;
@@ -119,8 +78,36 @@ body {
     }
 }
 
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 h2 {
-    margin-top: 1em;
+    margin-top: .5em;
     font-size: 2em;
     border-bottom: solid 3px skyblue;
     position: relative;
@@ -146,7 +133,7 @@ section.fadeout {
 }
 
 #main {
-    margin: 210px 10px 0 30px;
+    margin: 210px 10px 0 22px;
     padding: 0 5px;
     background-color: #fff;
     border-radius: 5px;
@@ -164,7 +151,8 @@ section.fadeout {
     margin-bottom: -100px;
 }
 
-#master_profiles {
+#master_profiles,
+{
     padding: 0 1em;
     .fa {
         width: 1em;

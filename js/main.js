@@ -7,75 +7,30 @@ $(document).ready(function() {
     $.getJSON("plugins/setting.json", function(data) {
         $.each(data["sections"], function(index, val) {
             $.getJSON("plugins/" + val["name"] + "/setting.json", function(data_) {
+                // js Load
                 $.each(data_["js"], function(index_, val_) {
                     $.getScript("plugins/" + val["name"] + "/" + val_);
                 });
+                // css Load
                 $.each(data_["css"], function(index_, val_) {
                     $.get("plugins/" + val["name"] + "/" + val_, function(data) {
                         $("style").append("<!-- Plugin: " + val["name"] + " -->" + data);
                     });
                 });
+                // html Load
                 $.get("plugins/" + val["name"] + "/" + data_["html"], function(data) {
-                    $("#" + val["parent"]).append("<!-- Plugin: " + val["name"] + " -->" + data);
+                    $("#" + val["parent"]).append("<!-- Plugin: " + val["name"] + " --><h2>" + val["display_name"] + "</h2>" + data);
                 });
             });
         });
     });
 
-
-
-    var jsonPath = "profile_data/";
-    $.getJSON(jsonPath + "personal.json", function(data) {
-        console.log(data);
-
-        // main
+    var jsonPath = "";
+    $.getJSON("plugins/master_data.json", function(data) {
+        // マスターデータ
         $("div#field-icon_url").children('img').attr('src', data["icon_url"]);
         $("div#field-name").children('h1').text(data["name"]);
         $("div#field-bio").children('span').html(data["bio"]);
-        $("div#field-location").children('span').text(data["location"]);
-        $("div#field-mail").children('span').text(data["mail"]);
-        $("div#field-url").children('a').children('span').text(data["url"]);
-        $("div#field-url").children('a').attr('href', data["url"]);
-        $("div#field-birthdate").children('span').text(data["birthdate"]);
-    });
-
-    $.getJSON(jsonPath + "works.json", function(data) {
-        console.log(data);
-        $.getJSON("https://api.github.com/users/" + data["github"] + "/repos", function(github) {
-            var length;
-            var langData = {};
-            $.each(github, function(index, val) {
-                if (val["language"] in langData) {
-                    ++langData[val["language"]];
-                } else {
-                    langData[val["language"]] = 1;
-                }
-                length = index + 1;
-            });
-
-            var g = 0;
-            $.each(langData, function(index, val) {
-                langData[index] = val / length;
-                g += val / length;
-            });
-
-            var str = '<div class="barchart">';
-            $.each(langData, function(index, val) {
-                var cl = index.replace(/#/g, "s");
-                cl = cl.replace(/¥+/g, "p");
-                str += '<div class="data lang_color ' + cl + '" style="width: ' + val * 100 + '%"></div><div class="data_char">' + index + '<span>(' + Math.round(val * 100) + '%)</span></div>';
-            });
-            str += '</div>';
-
-            $("div#field-langages").html(str);
-            $("div#field-detail").children('span').html(data["detail"]);
-            $("div#field-github").children('a').children('span').text(data["github"]);
-            $("div#field-github").children('a').attr('href', "https://github.com/" + data["github"]);
-
-
-        });
-
-
     });
 
     $("section#view-main").show();
