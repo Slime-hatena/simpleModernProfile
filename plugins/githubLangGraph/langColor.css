@@ -1,0 +1,735 @@
+.lang_color {
+    background: #6866fb
+}
+
+.lang_color.ABAP {
+    background: #E8274B
+}
+
+.lang_color.AGS Script {
+    background: #B9D9FF
+}
+
+.lang_color.AMPL {
+    background: #E6EFBB
+}
+
+.lang_color.ANTLR {
+    background: #9DC3FF
+}
+
+.lang_color.API Blueprint {
+    background: #2ACCA8
+}
+
+.lang_color.APL {
+    background: #5A8164
+}
+
+.lang_color.ASP {
+    background: #6a40fd
+}
+
+.lang_color.ATS {
+    background: #1ac620
+}
+
+.lang_color.ActionScript {
+    background: #882B0F
+}
+
+.lang_color.Ada {
+    background: #02f88c
+}
+
+.lang_color.Agda {
+    background: #315665
+}
+
+.lang_color.Alloy {
+    background: #cc5c24
+}
+
+.lang_color.Arc {
+    background: #aa2afe
+}
+
+.lang_color.Arduino {
+    background: #bd79d1
+}
+
+.lang_color.AspectJ {
+    background: #a957b0
+}
+
+.lang_color.Assembly {
+    background: #6E4C13
+}
+
+.lang_color.AutoHotkey {
+    background: #6594b9
+}
+
+.lang_color.AutoIt {
+    background: #1C3552
+}
+
+.lang_color.BlitzMax {
+    background: #cd6400
+}
+
+.lang_color.Boo {
+    background: #d4bec1
+}
+
+.lang_color.Brainfuck {
+    background: #2F2530
+}
+
+.lang_color.C {
+    background: #555555
+}
+
+.lang_color.Cs {
+    background: #178600
+}
+
+.lang_color.Cpp {
+    background: #f34b7d
+}
+
+.lang_color.CSS {
+    background: #563d7c
+}
+
+.lang_color.Chapel {
+    background: #8dc63f
+}
+
+.lang_color.Cirru {
+    background: #ccccff
+}
+
+.lang_color.Clarion {
+    background: #db901e
+}
+
+.lang_color.Clean {
+    background: #3F85AF
+}
+
+.lang_color.Clojure {
+    background: #db5855
+}
+
+.lang_color.CoffeeScript {
+    background: #244776
+}
+
+.lang_color.ColdFusion {
+    background: #ed2cd6
+}
+
+.lang_color.ColdFusion CFC {
+    background: #ed2cd6
+}
+
+.lang_color.Common Lisp {
+    background: #3fb68b
+}
+
+.lang_color.Component Pascal {
+    background: #b0ce4e
+}
+
+.lang_color.Crystal {
+    background: #776791
+}
+
+.lang_color.D {
+    background: #fcd46d
+}
+
+.lang_color.DM {
+    background: #447265
+}
+
+.lang_color.Dart {
+    background: #00B4AB
+}
+
+.lang_color.Diff {
+    background: #88dddd
+}
+
+.lang_color.Dogescript {
+    background: #cca760
+}
+
+.lang_color.Dylan {
+    background: #6c616e
+}
+
+.lang_color.E {
+    background: #ccce35
+}
+
+.lang_color.ECL {
+    background: #8a1267
+}
+
+.lang_color.Eagle {
+    background: #814C05
+}
+
+.lang_color.Eiffel {
+    background: #946d57
+}
+
+.lang_color.Elixir {
+    background: #6e4a7e
+}
+
+.lang_color.Elm {
+    background: #60B5CC
+}
+
+.lang_color.Emacs Lisp {
+    background: #c065db
+}
+
+.lang_color.EmberScript {
+    background: #FFF4F3
+}
+
+.lang_color.Erlang {
+    background: #B83998
+}
+
+.lang_color.Fs {
+    background: #b845fc
+}
+
+.lang_color.FLUX {
+    background: #88ccff
+}
+
+.lang_color.FORTRAN {
+    background: #4d41b1
+}
+
+.lang_color.Factor {
+    background: #636746
+}
+
+.lang_color.Fancy {
+    background: #7b9db4
+}
+
+.lang_color.Fantom {
+    background: #dbded5
+}
+
+.lang_color.Forth {
+    background: #341708
+}
+
+.lang_color.Frege {
+    background: #00cafe
+}
+
+.lang_color.Game Maker Language {
+    background: #8fb200
+}
+
+.lang_color.Glyph {
+    background: #e4cc98
+}
+
+.lang_color.Gnuplot {
+    background: #f0a9f0
+}
+
+.lang_color.Go {
+    background: #375eab
+}
+
+.lang_color.Golo {
+    background: #88562A
+}
+
+.lang_color.Gosu {
+    background: #82937f
+}
+
+.lang_color.Grammatical Framework {
+    background: #79aa7a
+}
+
+.lang_color.Groovy {
+    background: #e69f56
+}
+
+.lang_color.HTML {
+    background: #e44b23
+}
+
+.lang_color.Handlebars {
+    background: #01a9d6
+}
+
+.lang_color.Harbour {
+    background: #0e60e3
+}
+
+.lang_color.Haskell {
+    background: #29b544
+}
+
+.lang_color.Haxe {
+    background: #f7941e
+}
+
+.lang_color.Hy {
+    background: #7790B2
+}
+
+.lang_color.IDL {
+    background: #a3522f
+}
+
+.lang_color.Io {
+    background: #a9188d
+}
+
+.lang_color.Ioke {
+    background: #078193
+}
+
+.lang_color.Isabelle {
+    background: #FEFE00
+}
+
+.lang_color.J {
+    background: #9EEDFF
+}
+
+.lang_color.JFlex {
+    background: #DBCA00
+}
+
+.lang_color.Java {
+    background: #b07219
+}
+
+.lang_color.JavaScript {
+    background: #f1e05a
+}
+
+.lang_color.Julia {
+    background: #a270ba
+}
+
+.lang_color.KRL {
+    background: #28431f
+}
+
+.lang_color.Kotlin {
+    background: #EA4DFA
+}
+
+.lang_color.LFE {
+    background: #004200
+}
+
+.lang_color.LOLCODE {
+    background: #cc9900
+}
+
+.lang_color.LSL {
+    background: #3d9970
+}
+
+.lang_color.Lasso {
+    background: #999999
+}
+
+.lang_color.Latte {
+    background: #A8FF97
+}
+
+.lang_color.LiveScript {
+    background: #499886
+}
+
+.lang_color.LookML {
+    background: #652B81
+}
+
+.lang_color.Lua {
+    background: #000080
+}
+
+.lang_color.MTML {
+    background: #b7e1f4
+}
+
+.lang_color.Makefile {
+    background: #427819
+}
+
+.lang_color.Mask {
+    background: #f97732
+}
+
+.lang_color.Matlab {
+    background: #bb92ac
+}
+
+.lang_color.Max {
+    background: #c4a79c
+}
+
+.lang_color.Mercury {
+    background: #ff2b2b
+}
+
+.lang_color.Mirah {
+    background: #c7a938
+}
+
+.lang_color.Nemerle {
+    background: #3d3c6e
+}
+
+.lang_color.NetLinx {
+    background: #0aa0ff
+}
+
+.lang_color.NetLinx+ERB {
+    background: #747faa
+}
+
+.lang_color.NetLogo {
+    background: #ff6375
+}
+
+.lang_color.NewLisp {
+    background: #87AED7
+}
+
+.lang_color.Nimrod {
+    background: #37775b
+}
+
+.lang_color.Nit {
+    background: #009917
+}
+
+.lang_color.Nix {
+    background: #7e7eff
+}
+
+.lang_color.Nu {
+    background: #c9df40
+}
+
+.lang_color.OCaml {
+    background: #3be133
+}
+
+.lang_color.Objective-C {
+    background: #438eff
+}
+
+.lang_color.Objective-J {
+    background: #ff0c5a
+}
+
+.lang_color.Omgrofl {
+    background: #cabbff
+}
+
+.lang_color.Opal {
+    background: #f7ede0
+}
+
+.lang_color.Oxygene {
+    background: #cdd0e3
+}
+
+.lang_color.Oz {
+    background: #fab738
+}
+
+.lang_color.PAWN {
+    background: #dbb284
+}
+
+.lang_color.PHP {
+    background: #4F5D95
+}
+
+.lang_color.Pan {
+    background: #cc0000
+}
+
+.lang_color.Papyrus {
+    background: #6600cc
+}
+
+.lang_color.Parrot {
+    background: #f3ca0a
+}
+
+.lang_color.Pascal {
+    background: #b0ce4e
+}
+
+.lang_color.Perl {
+    background: #0298c3
+}
+
+.lang_color.Perl6 {
+    background: #0000fb
+}
+
+.lang_color.PigLatin {
+    background: #fcd7de
+}
+
+.lang_color.Pike {
+    background: #005390
+}
+
+.lang_color.PogoScript {
+    background: #d80074
+}
+
+.lang_color.Processing {
+    background: #0096D8
+}
+
+.lang_color.Prolog {
+    background: #74283c
+}
+
+.lang_color.Propeller Spin {
+    background: #7fa2a7
+}
+
+.lang_color.Puppet {
+    background: #332A77
+}
+
+.lang_color.Pure Data {
+    background: #91de79
+}
+
+.lang_color.PureBasic {
+    background: #5a6986
+}
+
+.lang_color.PureScript {
+    background: #1D222D
+}
+
+.lang_color.Python {
+    background: #3572A5
+}
+
+.lang_color.QML {
+    background: #44a51c
+}
+
+.lang_color.R {
+    background: #198ce7
+}
+
+.lang_color.RAML {
+    background: #77d9fb
+}
+
+.lang_color.Racket {
+    background: #22228f
+}
+
+.lang_color.Ragel in Ruby Host {
+    background: #e17600
+}
+
+.lang_color.Rebol {
+    background: #358a5b
+}
+
+.lang_color.Red {
+    background: #ee0000
+}
+
+.lang_color.Rouge {
+    background: #cc0088
+}
+
+.lang_color.Ruby {
+    background: #701516
+}
+
+.lang_color.Rust {
+    background: #dea584
+}
+
+.lang_color.SAS {
+    background: #B34936
+}
+
+.lang_color.SQF {
+    background: #3F3F3F
+}
+
+.lang_color.SaltStack {
+    background: #646464
+}
+
+.lang_color.Scala {
+    background: #7dd3b0
+}
+
+.lang_color.Scheme {
+    background: #1e4aec
+}
+
+.lang_color.Self {
+    background: #0579aa
+}
+
+.lang_color.Shell {
+    background: #89e051
+}
+
+.lang_color.Shen {
+    background: #120F14
+}
+
+.lang_color.Slash {
+    background: #007eff
+}
+
+.lang_color.Slim {
+    background: #ff8f77
+}
+
+.lang_color.Smalltalk {
+    background: #596706
+}
+
+.lang_color.SourcePawn {
+    background: #5c7611
+}
+
+.lang_color.Squirrel {
+    background: #800000
+}
+
+.lang_color.Standard ML {
+    background: #dc566d
+}
+
+.lang_color.SuperCollider {
+    background: #46390b
+}
+
+.lang_color.Swift {
+    background: #ffac45
+}
+
+.lang_color.SystemVerilog {
+    background: #DAE1C2
+}
+
+.lang_color.Tcl {
+    background: #e4cc98
+}
+
+.lang_color.TeX {
+    background: #3D6117
+}
+
+.lang_color.Turing {
+    background: #45f715
+}
+
+.lang_color.TypeScript {
+    background: #2b7489
+}
+
+.lang_color.Unified Parallel C {
+    background: #4e3617
+}
+
+.lang_color.UnrealScript {
+    background: #a54c4d
+}
+
+.lang_color.VHDL {
+    background: #adb2cb
+}
+
+.lang_color.Vala {
+    background: #fbe5cd
+}
+
+.lang_color.Verilog {
+    background: #b2b7f8
+}
+
+.lang_color.VimL {
+    background: #199f4b
+}
+
+.lang_color.Visual Basic {
+    background: #945db7
+}
+
+.lang_color.Volt {
+    background: #1F1F1F
+}
+
+.lang_color.Web Ontology Language {
+    background: #9cc9dd
+}
+
+.lang_color.XC {
+    background: #99DA07
+}
+
+.lang_color.XQuery {
+    background: #5232e7
+}
+
+.lang_color.Zephir {
+    background: #118f9e
+}
+
+.lang_color.eC {
+    background: #913960
+}
+
+.lang_color.edn {
+    background: #db5855
+}
+
+.lang_color.nesC {
+    background: #94B0C7
+}
+
+.lang_color.ooc {
+    background: #b0b77e
+}
+
+.lang_color.wisp {
+    background: #7582D1
+}
+
+.lang_color.xBase {
+    background: #403a40
+}

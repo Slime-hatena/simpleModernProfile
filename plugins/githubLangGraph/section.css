@@ -1,0 +1,41 @@
+@keyframes bar {
+    0% {
+        width: 0px
+    }
+}
+
+#field-langages {
+    border: solid #333;
+    border-width: 0 2px 0 2px
+}
+
+#field-langages .barchart {
+    width: 100%;
+    margin: 0 auto
+}
+
+#field-langages .barchart .data {
+    height: 20px;
+    margin: 10px 0;
+    animation: bar 1s ease 0.15s;
+    animation-fill-mode: both
+}
+
+#field-langages .barchart .data_char {
+    color: #fff;
+    text-shadow: black 2px 0px, black -2px 0px, black 0px -2px, black 0px 2px, black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px, black 1px 2px, black -1px 2px, black 1px -2px, black -1px -2px, black 2px 1px, black -2px 1px, black 2px -1px, black -2px -1px;
+    height: 20px;
+    margin-top: -30px
+}
+
+#field-langages .barchart .data_char:before {
+    content: "\00a0"
+}
+
+#field-langages .barchart .data_char span {
+    font-size: .8em
+}
+
+#field-langages .barchart .data_char span:before {
+    content: "\00a0\00a0"
+}

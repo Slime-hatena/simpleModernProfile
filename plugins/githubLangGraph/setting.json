@@ -1,5 +1,5 @@
 {
     "html": "section.html",
-    "css": ["section.css"],
+    "css": ["langColor.css", "section.css"],
     "js": ["section.js"]
 }
