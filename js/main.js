@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // ローディング
+
+
     var jsonPath = "profile_data/";
     $.getJSON(jsonPath + "personal.json", function(data) {
         console.log(data);
@@ -18,6 +21,7 @@ $(document).ready(function() {
 
 $(function() {
     $(window).scroll(function() {
+        // メニュー制御
         var ScrTop = $(document).scrollTop();
         if (ScrTop > 50) {
             $('#fixedMenu').css({ 'position': 'fixed', 'top': '0' });
@@ -35,5 +39,22 @@ $(function() {
     $('#fixedPagetop a').click(function() {
         $('html,body').animate({ scrollTop: 0 }, 1000);
         return false;
+    });
+
+    // 表示制御
+    var inspectionView;
+    var displayView;
+
+    $(".change_view").on('click', function(event) {
+        $('[id^=view]').attr('class', "fadeout");
+        displayView = "section#" + $(this).attr('data-viewname');
+        inspectionView = displayView != "section#view-main" ? "section#view-main" : "section#view-works";
+        console.log(inspectionView);
+        $(inspectionView).on('animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd', function() {
+            console.log("アニメーション終了");
+            $('[id^=view]').hide();
+            $(displayView).show();
+            $(displayView).attr('class', "fadein")
+        });
     });
 });

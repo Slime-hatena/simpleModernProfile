@@ -49,6 +49,45 @@
 // @include foundation-prototype-classes;
 @include motion-ui-transitions;
 @include motion-ui-animations;
+@mixin keyframes($animation-name: animaton) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($animation-name) {
+    -webkit-animation: $animation-name;
+    -moz-animation: $animation-name;
+    animation: $animation-name;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@include keyframes(fadeIn) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(fadeOut) {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 body {
     background-color: #fce;
     color: #333;
@@ -66,6 +105,14 @@ body {
             color: $Color_link_hover;
         }
     }
+}
+
+section.fadein {
+    @include animation(fadeIn 0.3s ease 0.15s);
+}
+
+section.fadeout {
+    @include animation(fadeOut 0.3s ease 0.15s);
 }
 
 #main {
@@ -87,7 +134,7 @@ body {
     margin-bottom: -100px;
 }
 
-#personal_profiles {
+#master_profiles {
     padding: 0 1em;
     .fa {
         width: 1em;
@@ -115,4 +162,20 @@ body {
     left: 0;
     width: 150px;
     position: absolute;
+    div {
+        // transform: rotate(90deg);
+    }
+}
+
+div.sample {
+    float: left;
+    width: 50px;
+    height: 40px;
+    background: url('画像のURL');
+    animation-name: 'anime';
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
