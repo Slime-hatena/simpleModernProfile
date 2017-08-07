@@ -1,12 +1,13 @@
 $(document).ready(function() {
     // ローディング
+    $('[id^=view]').hide();
 
 
     var jsonPath = "profile_data/";
     $.getJSON(jsonPath + "personal.json", function(data) {
         console.log(data);
 
-
+        // main
         $("div#field-icon_url").children('img').attr('src', data["icon_url"]);
         $("div#field-name").children('span').text(data["name"]);
         $("div#field-bio").children('span').text(data["bio"]);
@@ -15,8 +16,38 @@ $(document).ready(function() {
         $("div#field-url").children('a').children('span').text(data["url"]);
         $("div#field-url").children('a').attr('href', data["url"]);
         $("div#field-birthdate").children('span').text(data["birthdate"]);
+    });
+
+    $.getJSON(jsonPath + "works.json", function(data) {
+        console.log(data);
+        $.getJSON("https://api.github.com/users/" + data["github"] + "/repos", function(github) {
+            var length;
+            var langData = {};
+            $.each(github, function(index, val) {
+                if (val["language"] in langData) {
+                    ++langData[val["language"]];
+                } else {
+                    langData[val["language"]] = 1;
+                }
+                length = index + 1;
+            });
+
+            var g = 0;
+            $.each(langData, function(index, val) {
+                langData[index] = val / length;
+                g += val / length;
+            });
+
+            console.log(langData);
+        });
+
 
     });
+
+
+    $("section#view-main").show();
+    $("section#view-main").attr('class', "fadein")
+
 });
 
 $(function() {
@@ -41,10 +72,9 @@ $(function() {
         return false;
     });
 
-    // 表示制御
+    // ふんわりフェードイン表示制御
     var inspectionView;
     var displayView;
-
     $(".change_view").on('click', function(event) {
         $('[id^=view]').attr('class', "fadeout");
         displayView = "section#" + $(this).attr('data-viewname');
