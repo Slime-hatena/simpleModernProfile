@@ -9,8 +9,8 @@ $(document).ready(function() {
 
         // main
         $("div#field-icon_url").children('img').attr('src', data["icon_url"]);
-        $("div#field-name").children('span').text(data["name"]);
-        $("div#field-bio").children('span').text(data["bio"]);
+        $("div#field-name").children('h1').text(data["name"]);
+        $("div#field-bio").children('span').html(data["bio"]);
         $("div#field-location").children('span').text(data["location"]);
         $("div#field-mail").children('span').text(data["mail"]);
         $("div#field-url").children('a').children('span').text(data["url"]);
@@ -38,18 +38,31 @@ $(document).ready(function() {
                 g += val / length;
             });
 
-            console.log(langData);
+            var str = '<div class="barchart">';
+            $.each(langData, function(index, val) {
+                var cl = index.replace(/#/g, "s");
+                cl = cl.replace(/¥+/g, "p");
+                str += '<div class="data lang_color ' + cl + '" style="width: ' + val * 100 + '%">' + index + '</div>';
+            });
+            str += '</div>';
+
+            $("div#field-langages").html(str);
+            $("div#field-detail").children('span').html(data["detail"]);
+            $("div#field-github").children('a').children('span').text(data["github"]);
+            $("div#field-github").children('a').attr('href', "https://github.com/" + data["github"]);
+
+
         });
 
 
     });
-
 
     $("section#view-main").show();
     $("section#view-main").attr('class', "fadein")
 
 });
 
+var isFadeing = false;
 $(function() {
     $(window).scroll(function() {
         // メニュー制御
@@ -74,17 +87,23 @@ $(function() {
 
     // ふんわりフェードイン表示制御
     var inspectionView;
-    var displayView;
+    var displayView = "section#view-main";
     $(".change_view").on('click', function(event) {
-        $('[id^=view]').attr('class', "fadeout");
-        displayView = "section#" + $(this).attr('data-viewname');
-        inspectionView = displayView != "section#view-main" ? "section#view-main" : "section#view-works";
-        console.log(inspectionView);
-        $(inspectionView).on('animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd', function() {
-            console.log("アニメーション終了");
-            $('[id^=view]').hide();
-            $(displayView).show();
-            $(displayView).attr('class', "fadein")
-        });
+        if (!isFadeing) {
+            var display = "section#" + $(this).attr('data-viewname');
+            if (displayView != display) {
+                displayView = display;
+                inspectionView = displayView != "section#view-main" ? "section#view-main" : "section#view-works";
+
+                $('[id^=view]').attr('class', "fadeout");
+                isFadeing = true;
+                $(inspectionView).on('animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd', function() {
+                    $('[id^=view]').hide();
+                    $(displayView).show();
+                    $(displayView).attr('class', "fadein");
+                    isFadeing = false;
+                });
+            }
+        }
     });
 });
