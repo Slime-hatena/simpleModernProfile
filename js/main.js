@@ -19,7 +19,11 @@ $(document).ready(function() {
                 });
                 // html Load
                 $.get("plugins/" + val["name"] + "/" + data_["html"], function(data) {
-                    $("#" + val["parent"]).append("<!-- Plugin: " + val["name"] + " --><h2>" + val["display_name"] + "</h2>" + data);
+                    $("#" + val["parent"]).append("<!-- Plugin: " + val["name"] + " -->");
+                    if (val["display_name"] !== false) {
+                        $("#" + val["parent"]).append("<h2>" + val["display_name"] + "</h2>");
+                    }
+                    $("#" + val["parent"]).append(data);
                 });
             });
         });

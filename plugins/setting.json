@@ -1,14 +1,15 @@
 {
     "sections": [{
+            "name": "personalData",
+            "display_name": false,
+            "parent": "view-main"
+        },
+        {
             "name": "test",
             "display_name": "Test Area",
             "parent": "view-main"
         },
-        {
-            "name": "personalData",
-            "display_name": "プロフィール",
-            "parent": "view-main"
-        },
+
         {
             "name": "githubLangGraph",
             "display_name": "言語仕様率",
