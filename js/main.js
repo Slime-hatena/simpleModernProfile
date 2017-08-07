@@ -2,6 +2,27 @@ $(document).ready(function() {
     // ローディング
     $('[id^=view]').hide();
 
+    var css = "";
+    // プラグインロード
+    $.getJSON("plugins/setting.json", function(data) {
+        $.each(data["sections"], function(index, val) {
+            $.getJSON("plugins/" + val["name"] + "/setting.json", function(data_) {
+                $.each(data_["js"], function(index_, val_) {
+                    $.getScript("plugins/" + val["name"] + "/" + val_);
+                });
+                $.each(data_["css"], function(index_, val_) {
+                    $.get("plugins/" + val["name"] + "/" + val_, function(data) {
+                        $("style").append("<!-- Plugin: " + val["name"] + " -->" + data);
+                    });
+                });
+                $.get("plugins/" + val["name"] + "/" + data_["html"], function(data) {
+                    $("#" + val["parent"]).append("<!-- Plugin: " + val["name"] + " -->" + data);
+                });
+            });
+        });
+    });
+
+
 
     var jsonPath = "profile_data/";
     $.getJSON(jsonPath + "personal.json", function(data) {
@@ -75,8 +96,8 @@ $(function() {
             }
             $('#fixedPagetop').css({ 'display': 'block' });
         }
-        if (ScrTop < 50) {
-            $('#fixedMenu').css({ 'position': 'absolute', 'top': '50px' });
+        if (ScrTop < 210) {
+            $('#fixedMenu').css({ 'position': 'absolute', 'top': '215px' });
             $('#fixedPagetop').css({ 'display': 'none' });
         }
     });

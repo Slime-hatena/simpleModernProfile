@@ -1,0 +1,7 @@
+{
+    "sections": [{
+        "name": "test",
+        "display_name": "Test Area",
+        "parent": "view-main"
+    }]
+}

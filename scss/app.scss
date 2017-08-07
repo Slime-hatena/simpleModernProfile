@@ -146,7 +146,7 @@ section.fadeout {
 }
 
 #main {
-    margin: 210px 10px 0;
+    margin: 210px 10px 0 30px;
     padding: 0 5px;
     background-color: #fff;
     border-radius: 5px;
@@ -232,17 +232,27 @@ section.fadeout {
 
 //menu
 #fixedMenu {
-    top: 210px;
+    top: 215px;
     left: 0;
     width: 150px;
     position: absolute;
     .index {
         position: relative;
         height: 200px;
-        width: 0px;
+        width: 0;
         border-top: 20px solid transparent;
         border-left: 0px transparent;
         border-right: 30px solid #428BCA;
         border-bottom: 20px solid transparent;
+        div {
+            height: 100%;
+            display: inline-block;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            text-align: center;
+            color: #fff;
+            text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0, black 0px 1px 0, black 0-1px 0, black -1px 0 0, black 1px 0 0;
+        }
     }
 }
