@@ -1,2 +1,2 @@
 # simpleModernProfile
-FoundationとScssを使ってみたかった
+Scssを使ってみたかった。

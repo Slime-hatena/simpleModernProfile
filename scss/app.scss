@@ -1,6 +1,5 @@
 @charset 'utf-8';
 @import 'lang_color';
-// @import 'f';
 @mixin keyframes($animation-name: animaton) {
     @-webkit-keyframes #{$animation-name} {
         @content;
