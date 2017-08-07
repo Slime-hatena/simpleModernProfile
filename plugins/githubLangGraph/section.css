@@ -39,3 +39,7 @@
 #field-langages .barchart .data_char span:before {
     content: "\00a0\00a0"
 }
+
+#field-github {
+    text-align: right;
+}
