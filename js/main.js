@@ -8,9 +8,17 @@ $(document).ready(function() {
 
     // html構造ロード
     $.getJSON("plugins/tabs.json", function(data) {
+        var isChange = false;
         $.each(data["tabs"], function(index, val) {
-            $("div.wrapper").append('<section id=' + val['id'] + ' class="content_field"></section>');
+            $("div.wrapper").append('<section id=' + val['id'] + ' data-fieldtype="content_field"></section>');
             $("nav#fixedMenu").append('<div class="change_view index" data-viewname="' + val['id'] + '"><div>' + val['display_name'] + '</div></div>');
+            if (!isChange) {
+                isChange = true;
+                $("section#" + val['id']).show();
+                $("section#" + val['id']).attr('class', "fadein");
+            } else {
+                $("section#" + val['id']).hide();
+            }
         });
     });
 
@@ -48,8 +56,6 @@ $(document).ready(function() {
         $("div#field-bio").children('span').html(data["bio"]);
     });
 
-    $("section#view-main").show();
-    $("section#view-main").attr('class', "fadein");
     $('body').append(dummy);
 });
 
@@ -74,25 +80,26 @@ dummy.ready(function() {
     });
 
     // ふんわりフェードイン表示制御
-    var elements = $(".content_field:eq(0)").attr("id");
     var inspectionView;
-    var displayView = "section#" + "";
+    var displayView;
     $(document).on("click", ".change_view", function() {
-        console.log("jdsa");
+        if (displayView === void 0) {
+            //  data-fieldtype
+            displayView = "section#" + $("[data-fieldtype='content_field']:eq(0)").attr("id");
+        }
         if (!isFadeing) {
             var displayTarget = "section#" + $(this).attr('data-viewname');
             console.log(displayView + " -> " + displayTarget);
             if (displayView != displayTarget) {
                 isFadeing = true;
-                displayView = displayTarget;
-
-                $('[id^=view]').attr('class', "fadeout");
+                $(displayView).attr('class', "fadeout");
                 $(displayView).on('animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd', function() {
                     $('[id^=view]').hide();
                     $(displayView).show();
                     $(displayView).attr('class', "fadein");
                     isFadeing = false;
                 });
+                displayView = displayTarget;
             } else {
                 console.log("変更なし");
             }

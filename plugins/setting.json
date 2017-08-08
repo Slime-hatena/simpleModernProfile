@@ -7,13 +7,13 @@
         {
             "name": "test",
             "display_name": "Test Area",
-            "parent": "view-main"
+            "parent": "view-games"
         },
 
         {
             "name": "githubLangGraph",
             "display_name": "言語仕様率",
-            "parent": "view-main"
+            "parent": "view-works"
         }
     ]
 }
