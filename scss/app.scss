@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@import 'reset';
 @mixin keyframes($animation-name: animaton) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -38,21 +39,24 @@
     }
 }
 
-.wrapper {
-    padding: 0 2em;
-}
-
 * {
     box-sizing: inherit;
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #fce;
     color: #333;
     line-height: 1.5;
-    // -webkit-font-smoothing: antialiased;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    // -webkit-font-smoothing: antialiased0;
     // -moz-osx-font-smoothing: grayscale;
     // link
     $Color_link: #33f;
@@ -70,32 +74,18 @@ body {
     }
 }
 
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-p,
-blockquote,
-th,
-td {
-    padding: 0;
-    margin: 0;
+#main {
+    $Top_margin: 210px;
+    margin: $Top_margin 10px 0 30px;
+    padding: 0 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    height: calc( 100% - #{$Top_margin});
+    min-height: calc( 100% - #{$Top_margin});
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.wrapper {
+    padding: 0 2em;
 }
 
 h2 {
@@ -122,13 +112,6 @@ section.fadein {
 
 section.fadeout {
     @include animation(fadeOut 0.3s ease 0.15s);
-}
-
-#main {
-    margin: 210px 10px 0 22px;
-    padding: 0 5px;
-    background-color: #fff;
-    border-radius: 5px;
 }
 
 #field-icon_url {
