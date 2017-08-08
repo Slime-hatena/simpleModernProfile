@@ -166,15 +166,15 @@ section.fadeout {
     }
 }
 
-//menu
 #fixedMenu {
     top: 215px;
     left: 0;
     width: 150px;
     position: absolute;
     .index {
+        margin: 0 0 5px 0;
         position: relative;
-        height: 200px;
+        height: 150px;
         width: 0;
         border-top: 20px solid transparent;
         border-left: 0px transparent;

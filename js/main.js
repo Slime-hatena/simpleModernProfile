@@ -1,8 +1,19 @@
+var isFadeing = false;
+var dummy = $('<!-- content ready -->');
+
 $(document).ready(function() {
+
     // ローディング
     $('[id^=view]').hide();
 
-    var css = "";
+    // html構造ロード
+    $.getJSON("plugins/tabs.json", function(data) {
+        $.each(data["tabs"], function(index, val) {
+            $("div.wrapper").append('<section id=' + val['id'] + ' class="content_field"></section>');
+            $("nav#fixedMenu").append('<div class="change_view index" data-viewname="' + val['id'] + '"><div>' + val['display_name'] + '</div></div>');
+        });
+    });
+
     // プラグインロード
     $.getJSON("plugins/setting.json", function(data) {
         $.each(data["sections"], function(index, val) {
@@ -38,12 +49,13 @@ $(document).ready(function() {
     });
 
     $("section#view-main").show();
-    $("section#view-main").attr('class', "fadein")
-
+    $("section#view-main").attr('class', "fadein");
+    $('body').append(dummy);
 });
 
-var isFadeing = false;
-$(function() {
+
+
+dummy.ready(function() {
     $(window).scroll(function() {
         // メニュー制御
         var ScrTop = $(document).scrollTop();
@@ -60,30 +72,32 @@ $(function() {
             $('#fixedPagetop').css({ 'display': 'none' });
         }
     });
-    $('#fixedPagetop a').click(function() {
-        $('html,body').animate({ scrollTop: 0 }, 1000);
-        return false;
-    });
 
     // ふんわりフェードイン表示制御
+    var elements = $(".content_field:eq(0)").attr("id");
     var inspectionView;
-    var displayView = "section#view-main";
-    $(".change_view").on('click', function(event) {
+    var displayView = "section#" + "";
+    $(document).on("click", ".change_view", function() {
+        console.log("jdsa");
         if (!isFadeing) {
-            var display = "section#" + $(this).attr('data-viewname');
-            if (displayView != display) {
-                displayView = display;
-                inspectionView = displayView != "section#view-main" ? "section#view-main" : "section#view-works";
+            var displayTarget = "section#" + $(this).attr('data-viewname');
+            console.log(displayView + " -> " + displayTarget);
+            if (displayView != displayTarget) {
+                isFadeing = true;
+                displayView = displayTarget;
 
                 $('[id^=view]').attr('class', "fadeout");
-                isFadeing = true;
-                $(inspectionView).on('animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd', function() {
+                $(displayView).on('animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd', function() {
                     $('[id^=view]').hide();
                     $(displayView).show();
                     $(displayView).attr('class', "fadein");
                     isFadeing = false;
                 });
+            } else {
+                console.log("変更なし");
             }
+        } else {
+            console.log("アニメーションの途中");
         }
     });
 });

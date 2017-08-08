@@ -1,0 +1,15 @@
+{
+    "tabs": [{
+            "display_name": "Main",
+            "id": "view-main"
+        },
+        {
+            "display_name": "Works",
+            "id": "view-works"
+        },
+        {
+            "display_name": "Games",
+            "id": "view-games"
+        }
+    ]
+}
