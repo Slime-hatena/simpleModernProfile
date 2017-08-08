@@ -89,7 +89,7 @@ dummy.ready(function() {
         }
         if (!isFadeing) {
             var displayTarget = "section#" + $(this).attr('data-viewname');
-            console.log(displayView + " -> " + displayTarget);
+            // console.log(displayView + " -> " + displayTarget);
             if (displayView != displayTarget) {
                 isFadeing = true;
                 $(displayView).attr('class', "fadeout");
@@ -100,11 +100,7 @@ dummy.ready(function() {
                     isFadeing = false;
                 });
                 displayView = displayTarget;
-            } else {
-                console.log("変更なし");
             }
-        } else {
-            console.log("アニメーションの途中");
         }
     });
 });
