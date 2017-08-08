@@ -1,5 +1,16 @@
 @charset 'utf-8';
 @import 'reset';
+// color setting.
+$theme-fontColor: #333;
+$theme-linkColor: #33f;
+$theme-linkHoverColor: #f3f;
+$theme-backgroundColor: #FADBE1;
+$theme-mainBackgroundColor: #f3f3f3;
+$theme-emphasisColor: #eda18b;
+$theme-accentColor: #e8df7f;
+$theme-menuColor: #B4CC9C;
+$theme-menuActiveColor: #899b77;
+// setting end
 @mixin keyframes($animation-name: animaton) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -10,6 +21,10 @@
     @keyframes #{$animation-name} {
         @content;
     }
+}
+
+@function rgb16a($color-code, $opacity) {
+    @return rgba(red($color-code), green($color-code), blue($color-code), $opacity)
 }
 
 @mixin animation($animation-name) {
@@ -50,38 +65,62 @@ html {
 }
 
 body {
-    background-color: #fce;
-    color: #333;
+    background-color: $theme-backgroundColor;
+    color: $theme-fontColor;
     line-height: 1.5;
     height: 100%;
     margin: 0;
     padding: 0;
-    // -webkit-font-smoothing: antialiased0;
+    // -webkit-font-smoothing: antialiased;
     // -moz-osx-font-smoothing: grayscale;
     // link
-    $Color_link: #33f;
-    $Color_link_hover: #f3f;
     a {
         &:link,
         &:visited,
         &:active {
-            color: $Color_link;
+            color: $theme-linkColor;
             text-decoration: none
         }
         &:hover {
-            color: $Color_link_hover;
+            color: $theme-linkHoverColor;
         }
     }
 }
 
+#background_img {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    height: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(rgb16a($theme-backgroundColor, 0) 80%, rgb16a($theme-backgroundColor, 0.75) 90%, rgb16a($theme-backgroundColor, 1));
+    }
+}
+
 #main {
+    position: relative;
     $Top_margin: 210px;
-    margin: $Top_margin 10px 0 30px;
+    margin: 0 10px 0 30px;
     padding: 0 5px;
-    background-color: #fff;
+    background-color: $theme-mainBackgroundColor;
     border-radius: 5px;
     height: calc( 100% - #{$Top_margin});
     min-height: calc( 100% - #{$Top_margin});
+    top: -50px
 }
 
 .wrapper {
@@ -91,7 +130,7 @@ body {
 h2 {
     margin-top: .5em;
     font-size: 2em;
-    border-bottom: solid 3px skyblue;
+    border-bottom: solid 3px $theme-emphasisColor;
     position: relative;
     &:before {
         content: "\00a0";
@@ -100,10 +139,15 @@ h2 {
         position: absolute;
         content: "\00a0";
         display: block;
-        border-bottom: solid 3px #ffc778;
+        border-bottom: solid 3px $theme-accentColor;
         bottom: -3px;
         width: 30%;
     }
+}
+
+strong,
+b {
+    color: $theme-emphasisColor;
 }
 
 section.fadein {
@@ -150,18 +194,39 @@ section.fadeout {
 }
 
 #fixedMenu {
-    top: 215px;
+    top: 260px;
     left: 0;
     width: 150px;
     position: absolute;
     .index {
         margin: 0 0 5px 0;
         position: relative;
-        height: 150px;
+        height: 100px;
         width: 0;
         border-top: 20px solid transparent;
         border-left: 0px transparent;
-        border-right: 30px solid #428BCA;
+        border-right: 30px solid $theme-menuColor;
+        border-bottom: 20px solid transparent;
+        cursor: pointer;
+        div {
+            height: 100%;
+            display: inline-block;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            text-align: center;
+            color: #fff;
+            text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0, black 0px 1px 0, black 0-1px 0, black -1px 0 0, black 1px 0 0;
+        }
+    }
+    .index_select {
+        margin: 0 0 5px 0;
+        position: relative;
+        height: 100px;
+        width: 0;
+        border-top: 20px solid transparent;
+        border-left: 0px transparent;
+        border-right: 30px solid $theme-menuActiveColor;
         border-bottom: 20px solid transparent;
         cursor: pointer;
         div {

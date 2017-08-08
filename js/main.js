@@ -16,6 +16,8 @@ $(document).ready(function() {
                 isChange = true;
                 $("section#" + val['id']).show();
                 $("section#" + val['id']).attr('class', "fadein");
+                $("[data-viewname='" + val['id'] + "']").removeClass("index");
+                $("[data-viewname='" + val['id'] + "']").addClass("index_select");
             } else {
                 $("section#" + val['id']).hide();
             }
@@ -54,11 +56,13 @@ $(document).ready(function() {
         $("div#field-icon_url").children('img').attr('src', data["icon_url"]);
         $("div#field-name").children('h1').text(data["name"]);
         $("div#field-bio").children('span').html(data["bio"]);
+        if (data.hasOwnProperty('header_url')) {
+            $("div#background_img").append('<img src="' + data["header_url"] + '">');
+        }
     });
 
     $('body').append(dummy);
 });
-
 
 
 dummy.ready(function() {
@@ -73,8 +77,8 @@ dummy.ready(function() {
             }
             $('#fixedPagetop').css({ 'display': 'block' });
         }
-        if (ScrTop < 210) {
-            $('#fixedMenu').css({ 'position': 'absolute', 'top': '215px' });
+        if (ScrTop < 260) {
+            $('#fixedMenu').css({ 'position': 'absolute', 'top': '260px' });
             $('#fixedPagetop').css({ 'display': 'none' });
         }
     });
@@ -84,7 +88,6 @@ dummy.ready(function() {
     var displayView;
     $(document).on("click", ".change_view", function() {
         if (displayView === void 0) {
-            //  data-fieldtype
             displayView = "section#" + $("[data-fieldtype='content_field']:eq(0)").attr("id");
         }
         if (!isFadeing) {
@@ -95,6 +98,10 @@ dummy.ready(function() {
                 $(displayView).attr('class', "fadeout");
                 $(displayView).on('animationend webkitAnimationEnd oAnimationEnd mozAnimationEnd', function() {
                     $('[id^=view]').hide();
+                    $(".change_view").removeClass("index_select");
+                    $(".change_view").addClass("index");
+                    $("[data-viewname='" + displayView.replace(/section#/g, "") + "']").removeClass("index");
+                    $("[data-viewname='" + displayView.replace(/section#/g, "") + "']").addClass("index_select");
                     $(displayView).show();
                     $(displayView).attr('class', "fadein");
                     isFadeing = false;
