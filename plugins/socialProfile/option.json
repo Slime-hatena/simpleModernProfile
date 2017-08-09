@@ -17,7 +17,7 @@
     "GitHub": {
         "name": false,
         "link": "https://ja.foursquare.com/slime_hatena",
-        "icon": "<i class=\"fa fa-foursquare\" aria-hidden=\"true\"></i>"
+        "icon": "<i class=\"fa fa-github\" aria-hidden=\"true\"></i>"
     },
     "Youtube": {
         "name": false,
