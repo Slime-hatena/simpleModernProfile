@@ -4,7 +4,6 @@ var dummy = $('<!-- content ready -->');
 $(document).ready(function() {
     // ハッシュからローディングを変化させる
     var urlHash = location.hash;
-    console.log(urlHash);
     switch (urlHash) {
         case "#c2":
             $("div#loader").prepend('<div class="balloon">名刺交換 ありがとうございました！</div><img src="resources/welcome_c2.png" style="width: 70%">');
@@ -25,7 +24,7 @@ $(document).ready(function() {
     $.getJSON("plugins/tabs.json", function(data) {
         var isChange = false;
         $.each(data["tabs"], function(index, val) {
-            $("div.wrapper").append('<section id=' + val['id'] + ' data-fieldtype="content_field"></section>');
+            $("div.wrapper").append('<section id=' + val['id'] + ' data-fieldtype="content_field"><div id="heading-' + val['id'] + '"></div></section>');
             $("nav#fixedMenu").append('<div class="change_view index" data-viewname="' + val['id'] + '"><div>' + val['display_name'] + '</div></div>');
             if (!isChange) {
                 isChange = true;
@@ -55,11 +54,12 @@ $(document).ready(function() {
                 });
                 // html Load
                 $.get("plugins/" + val["name"] + "/" + data_["html"], function(data) {
-                    $("#" + val["parent"]).append("<!-- Plugin: " + val["name"] + " -->");
+                    $("#" + val["parent"]).append(("<!-- Plugin: " + val["name"] + ' --> <div class="content_area">'));
                     if (val["display_name"] !== false) {
-                        $("#" + val["parent"]).append("<h2>" + val["display_name"] + "</h2>");
+                        $("#" + val["parent"]).append('<h2 id="' + val["name"] + '">' + val["display_name"] + "</h2>");
+                        $("#heading-" + val["parent"]).append('<a href="#' + val["name"] + '">' + val["display_name"] + '</a>');
                     }
-                    $("#" + val["parent"]).append(data);
+                    $("#" + val["parent"]).append(data + "</div>");
                 });
             });
         });
@@ -75,15 +75,24 @@ $(document).ready(function() {
             $("div#background_img").append('<img src="' + data["header_url"] + '">');
         }
     });
+
     $('body').append(dummy);
 });
 
 
 dummy.ready(function() {
-    // ロード終了
     $('#wrap').css('display', 'block');
     $('#loader-bg').delay(900).fadeOut(800);
     $('#loader').delay(600).fadeOut(300);
+
+    $(document).on('click', 'a[href^="#"]', function() {
+        var speed = 600;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+        return false;
+    });
 
     $(window).scroll(function() {
         // メニュー制御
