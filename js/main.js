@@ -24,7 +24,7 @@ $(document).ready(function() {
     $.getJSON("plugins/tabs.json", function(data) {
         var isChange = false;
         $.each(data["tabs"], function(index, val) {
-            $("div.wrapper").append('<section id=' + val['id'] + ' data-fieldtype="content_field"><div id="heading-' + val['id'] + '"></div></section>');
+            $("div.wrapper").append('<section id=' + val['id'] + ' data-fieldtype="content_field"><ul id="heading-' + val['id'] + '"></ul></section>');
             $("nav#fixedMenu").append('<div class="change_view index" data-viewname="' + val['id'] + '"><div>' + val['display_name'] + '</div></div>');
             if (!isChange) {
                 isChange = true;
@@ -57,7 +57,7 @@ $(document).ready(function() {
                     $("#" + val["parent"]).append(("<!-- Plugin: " + val["name"] + ' --> <div class="content_area">'));
                     if (val["display_name"] !== false) {
                         $("#" + val["parent"]).append('<h2 id="' + val["name"] + '">' + val["display_name"] + "</h2>");
-                        $("#heading-" + val["parent"]).append('<a href="#' + val["name"] + '">' + val["display_name"] + '</a>');
+                        $("#heading-" + val["parent"]).append('<li><a href="#' + val["name"] + '">' + val["display_name"] + '</a></li>');
                     }
                     $("#" + val["parent"]).append(data + "</div>");
                 });
