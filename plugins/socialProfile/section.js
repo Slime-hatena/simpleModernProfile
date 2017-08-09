@@ -11,20 +11,6 @@ $.getJSON("plugins/socialProfile/option.json", function(data) {
             (isName ? ":  " + val['name'] : "") +
             (isLink ? '</a>' : "") + "</div>";
 
-        /*
-                if (val['name'] !== false) {
-                    str += ": " + val['name'];
-                }
-
-                if (val['icon'] !== false) {
-                    str = val['icon'] + str;
-                }
-
-                if (val['link'] !== false) {
-                    str = '<div>< + str + ' < /a></div > ';
-                }
-                */
-
         $("#socialProfileAppend").append(str);
 
     });

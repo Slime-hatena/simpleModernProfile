@@ -146,6 +146,16 @@ h2 {
     }
 }
 
+h3 {
+    margin-top: .3em;
+    font-size: 1.3em;
+    border-bottom: solid 2px $theme-fontColor;
+    position: relative;
+    &:before {
+        content: "\00a0";
+    }
+}
+
 strong,
 b {
     color: $theme-emphasisColor;

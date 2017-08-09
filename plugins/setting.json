@@ -23,6 +23,11 @@
             "name": "githubLangGraph",
             "display_name": "言語仕様率",
             "parent": "view-works"
+        },
+        {
+            "name": "linkPresent",
+            "display_name": "作ったもの",
+            "parent": "view-works"
         }
     ]
 }
