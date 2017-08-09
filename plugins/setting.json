@@ -5,11 +5,20 @@
             "parent": "view-main"
         },
         {
-            "name": "test",
-            "display_name": "Test Area",
-            "parent": "view-games"
+            "name": "htmlArea_0",
+            "display_name": false,
+            "parent": "view-main"
         },
-
+        {
+            "name": "socialProfile",
+            "display_name": false,
+            "parent": "view-social"
+        },
+        {
+            "name": "htmlArea_1",
+            "display_name": false,
+            "parent": "view-social"
+        },
         {
             "name": "githubLangGraph",
             "display_name": "言語仕様率",

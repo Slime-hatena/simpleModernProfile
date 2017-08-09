@@ -1,7 +1,11 @@
 {
     "tabs": [{
-            "display_name": "Main",
+            "display_name": "About",
             "id": "view-main"
+        },
+        {
+            "display_name": "Social",
+            "id": "view-social"
         },
         {
             "display_name": "Works",

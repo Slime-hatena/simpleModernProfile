@@ -1,0 +1,57 @@
+{
+    "Blog": {
+        "name": "Akisame's Diary",
+        "link": "http://aki-memo.net",
+        "icon": "<i class=\"fa fa-wordpress\" aria-hidden=\"true\"></i>"
+    },
+    "Twitter": {
+        "name": "@Slime_hatena",
+        "link": "https://twitter.com/Slime_hatena",
+        "icon": "<i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>"
+    },
+    "Twitter(音ゲー用)": {
+        "name": "@2xAki",
+        "link": "https://twitter.com/2xAki",
+        "icon": "<i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>"
+    },
+    "GitHub": {
+        "name": false,
+        "link": "https://ja.foursquare.com/slime_hatena",
+        "icon": "<i class=\"fa fa-foursquare\" aria-hidden=\"true\"></i>"
+    },
+    "Youtube": {
+        "name": false,
+        "link": "https://www.youtube.com/c/AkisameSlime",
+        "icon": "<i class=\"fa fa-youtube-play\" aria-hidden=\"true\"></i>"
+    },
+    "niconico": {
+        "name": false,
+        "link": "http://com.nicovideo.jp/community/co1630296",
+        "icon": "<i class=\"fa fa-television\" aria-hidden=\"true\"></i>"
+    },
+    "Discord": {
+        "name": "秋雨(Slime_hatena)#9329",
+        "link": false,
+        "icon": "<i class=\"fa fa-gamepad\" aria-hidden=\"true\"></i>"
+    },
+    "Last.fm": {
+        "name": false,
+        "link": "https://www.last.fm/ja/user/Slime_hatena",
+        "icon": "<i class=\"fa fa-lastfm\" aria-hidden=\"true\"></i>"
+    },
+    "Foursquare": {
+        "name": false,
+        "link": "https://ja.foursquare.com/slime_hatena",
+        "icon": "<i class=\"fa fa-foursquare\" aria-hidden=\"true\"></i>"
+    },
+    "NintendoAccount": {
+        "name": "5561-3301-2636",
+        "link": false,
+        "icon": "<i class=\"fa fa-gamepad\" aria-hidden=\"true\"></i>"
+    },
+    "Steam": {
+        "name": false,
+        "link": "http://steamcommunity.com/id/slime_hatena",
+        "icon": "<i class=\"fa fa-steam\" aria-hidden=\"true\"></i>"
+    }
+}

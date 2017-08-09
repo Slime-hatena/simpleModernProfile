@@ -8,7 +8,7 @@ $theme-linkHoverColor: #f3f;
 $theme-backgroundColor: #FADBE1;
 $theme-mainBackgroundColor: #f3f3f3;
 $theme-emphasisColor: #eda18b;
-$theme-accentColor: #e8df7f;
+$theme-accentColor: #cec777;
 $theme-menuColor: #B4CC9C;
 $theme-menuActiveColor: #899b77;
 // setting end
@@ -159,6 +159,10 @@ section.fadeout {
     @include animation(fadeOut 0.3s ease 0.15s);
 }
 
+.content_area {
+    margin: 1em 0;
+}
+
 #field-icon_url {
     img {
         border-radius: 50%;
@@ -200,7 +204,7 @@ section.fadeout {
     width: 150px;
     position: absolute;
     .index {
-        margin: 0 0 5px 0;
+        margin: 0 0 -2px 0;
         position: relative;
         height: 100px;
         width: 0;
@@ -221,7 +225,7 @@ section.fadeout {
         }
     }
     .index_select {
-        margin: 0 0 5px 0;
+        margin: 0 0 -2px 0;
         position: relative;
         height: 100px;
         width: 0;
