@@ -2,10 +2,25 @@ var isFadeing = false;
 var dummy = $('<!-- content ready -->');
 
 $(document).ready(function() {
+    // ハッシュからローディングを変化させる
+    var urlHash = location.hash;
+    console.log(urlHash);
+    switch (urlHash) {
+        case "#c2":
+            $("div#loader").prepend('<div class="balloon">名刺交換 ありがとうございました！</div><img src="resources/welcome_c2.png" style="width: 70%">');
+            break;
 
-    // ローディング
+        default:
+            break;
+
+    }
+
+    // ローディング処理
+    var h = $(window).height();
+    $('#wrap').css('display', 'none');
+    $('#loader-bg ,#loader').height(h).css('display', 'block');
+
     $('[id^=view]').hide();
-
     // html構造ロード
     $.getJSON("plugins/tabs.json", function(data) {
         var isChange = false;
@@ -60,12 +75,16 @@ $(document).ready(function() {
             $("div#background_img").append('<img src="' + data["header_url"] + '">');
         }
     });
-
     $('body').append(dummy);
 });
 
 
 dummy.ready(function() {
+    // ロード終了
+    $('#wrap').css('display', 'block');
+    $('#loader-bg').delay(900).fadeOut(800);
+    $('#loader').delay(600).fadeOut(300);
+
     $(window).scroll(function() {
         // メニュー制御
         var ScrTop = $(document).scrollTop();
