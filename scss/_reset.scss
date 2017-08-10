@@ -29,3 +29,14 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+li {
+    list-style-type: none;
+    &:before {
+        content: "\f00c";
+        color: #333;
+        font-family: FontAwesome;
+        position: relative;
+        left: -.2em;
+    }
+}
