@@ -30,6 +30,11 @@
             "parent": "view-works"
         },
         {
+            "name": "playingThis_0",
+            "display_name": "ソーシャルゲーム",
+            "parent": "view-games"
+        },
+        {
             "name": "playingThis_1",
             "display_name": "アーケードゲーム",
             "parent": "view-games"
