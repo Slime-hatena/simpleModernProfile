@@ -10,6 +10,11 @@
             "parent": "view-main"
         },
         {
+            "name": "happyBusy",
+            "display_name": false,
+            "parent": "view-main"
+        },
+        {
             "name": "socialProfile",
             "display_name": false,
             "parent": "view-social"
