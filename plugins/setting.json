@@ -28,6 +28,11 @@
             "name": "linkPresent",
             "display_name": "作ったもの",
             "parent": "view-works"
+        },
+        {
+            "name": "playingThis_1",
+            "display_name": "アーケードゲーム",
+            "parent": "view-games"
         }
     ]
 }

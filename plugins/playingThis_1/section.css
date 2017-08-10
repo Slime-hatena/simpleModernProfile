@@ -1,0 +1,21 @@
+.blackButton {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    margin: 0;
+}
+
+.blackButton>span {
+    color: #ddd;
+    background: #000;
+    font-size: .5em;
+    margin: 0;
+    padding: .2em;
+    border-radius: 3px;
+}
+
+.blackButton>span::before {
+    content: "\f08e&nbsp;";
+    color: #ddd;
+    font-family: FontAwesome;
+}

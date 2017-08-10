@@ -5,7 +5,7 @@ $.getJSON("plugins/socialProfile/option.json", function(data) {
         var isIcon = (val['icon'] !== false ? true : false);
         var isLink = (val['link'] !== false ? true : false);
 
-        str = "<div>" + (isIcon ? val['icon'] : "□") +
+        str = '<div><span class="service_icon">' + (isIcon ? val['icon'] : "□") + "</span>" +
             (isLink ? '<a href="' + val['link'] + '" target="_blank">' : "") +
             index +
             (isName ? ":  " + val['name'] : "") +

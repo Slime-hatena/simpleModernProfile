@@ -14,9 +14,14 @@
         "link": "https://twitter.com/2xAki",
         "icon": "<i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>"
     },
+    "Mastodon:Pawoo": {
+        "name": "@Slime_hatena",
+        "link": "https://pawoo.net/web/accounts/93107",
+        "icon": "🐘"
+    },
     "GitHub": {
         "name": false,
-        "link": "https://ja.foursquare.com/slime_hatena",
+        "link": "https://github.com/Slime-hatena",
         "icon": "<i class=\"fa fa-github\" aria-hidden=\"true\"></i>"
     },
     "Youtube": {

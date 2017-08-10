@@ -1,0 +1,58 @@
+{
+    "section": [{
+            "title": "beatmania IIDX",
+            "description": "<p>SP7段 DP2段<br>未だにTHE SAFARIにEasyすら付きません。<br>段位取得日の一覧は<a href=\"http://aki-memo.net/94\" target=\"_blank\">こちら</a></p>",
+            "link": "http://www.konami.jp/bemani/bm2dx/"
+        },
+        {
+            "title": "BeatStream",
+            "description": "<p>ありがとうBeatStream<br>一応ランク神でした。</p>",
+            "link": "https://p.eagate.573.jp/game/beatstream/animtribe/p/index.html"
+        },
+        {
+            "title": "シンクロニカ",
+            "description": "<p>好きですが如何せん、設置店舗が少ないのでそんなにやり込めてはいません。みんなもシンクロニカ、やろう！<br>Name: Ａｋｉ．１４２ｓ</p>",
+            "link": "https://bandainamcoent.co.jp/am/vg/Synchronica/"
+        },
+        {
+            "title": "SOUND VOLTEX",
+            "description": "<p>好きなときを好きなときにやってます。VOLFORCEアルジェントです。<br>Name: Aki.142s</p>",
+            "link": "https://p.eagate.573.jp/game/sdvx/"
+        },
+        {
+            "title": "チュウニズム",
+            "description": "<p>たまーにプレイしてます。レート14前半をウロウロしてます。<br>Name: Aki.142s</p>",
+            "link": "http://chunithm.sega.jp/"
+        },
+        {
+            "title": "グルーヴコースター",
+            "description": "<p>このゲームをキッカケにいろいろな音ゲーに手を出すようになりました。初代はレベル70ぐらいまでやってたハズ。「I ♥ Code: Vermilion」つけてます。<br>Name: Aki.142s</p>",
+            "link": "http://groovecoaster.jp"
+        },
+        {
+            "title": "maimai",
+            "description": "<p>グルコスの前にハマってた音ゲーです。初代〜Greenぐらいまではメインでやってました。<br>Name: Aki.142s</p>",
+            "link": "http://maimai.sega.jp"
+        },
+        {
+            "title": "太鼓の達人",
+            "description": "<p>音ゲー元祖。これをやっていなければ今音ゲーをやってなかったまで有るかも。記憶が正しければ太鼓の達人9はプレイしてたと思います。モモイロVer.までは結構プレイしてました。<br>Name: あきさめ</p>",
+            "link": "http://maimai.sega.jp"
+        },
+        {
+            "title": "その他の音ゲー",
+            "description": "<p>現在日本でプレイできる音ゲーはすべてプレイしていると思います。これやってる？ってTwitterで聞いて下さい！</p>",
+            "link": false
+        },
+        {
+            "title": "LORD of VERMILION",
+            "description": "<p>3.1からやってたと思います。 <br>3ではバハムートとかタマとか遊月とか。 4ではハデス使ってます。 <br>大体シルバーにいますが、ver3.3時代にプラチナDまでは上がったこと有ります。<br>Ver3Name: Akisame / Ver4Name: 秋雨</p>",
+            "link": "http://www.lordofv.com"
+        },
+        {
+            "title": "Wonderland Wars",
+            "description": "<p>ミクサでメテオを落とすのが好きです。リンとかもたまに使います。<br>Ver1はA4、Ver2は銀筆です。</p>",
+            "link": "http://wonder.sega.jp"
+        }
+    ]
+}
